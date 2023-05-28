@@ -1,1 +1,5 @@
-<p>products-listing works!</p>
+<ul>
+    <li [ngStyle]="{ color: color }" *ngFor="let product of products">
+        {{product.name}}
+    </li>
+</ul>
