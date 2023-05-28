@@ -7,3 +7,6 @@
 ### Create new component in Utils module.
 #### ng generate component utils/products-listing --module=utils
 #### ng generate component MODULE_NAME/COMPONENT_NAME --module=MODULE_NAME
+
+### Create products service
+#### ng generate service services/products
