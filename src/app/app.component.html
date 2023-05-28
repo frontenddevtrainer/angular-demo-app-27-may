@@ -1,4 +1,16 @@
---------- Latest Products
-<app-products-listing [products]="latestProducts" [color]="'red'"></app-products-listing>
----------- Top Products
-<app-products-listing [products]="topProducts"></app-products-listing>
+<app-header></app-header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-products-listing [products]="latestProducts" [color]="'black'"></app-products-listing>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ---------- Top Products
+<app-products-listing [products]="topProducts"></app-products-listing> -->
+<app-footer></app-footer>
