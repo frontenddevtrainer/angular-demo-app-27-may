@@ -1,9 +1,13 @@
-<div [ngStyle]="{ color: color }" *ngFor="let product of products" class="card" style="width: 18rem;">
-    <img src="{{product.thumbnail}}" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{product.name}}</h5>
-        <p class="card-text">{{product.description}}</p>
-        <p class="card-text">{{product.price}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container">
+    <div class="row">
+        <div [ngStyle]="{ color: color }" *ngFor="let product of products" class="card col-3 gap" style="width: 18rem;">
+            <img src="{{product.thumbnail}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">{{product.description}}</p>
+                <p class="card-text">{{product.price | currency }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
     </div>
 </div>
