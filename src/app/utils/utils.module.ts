@@ -10,6 +10,9 @@ import { ProductsListingComponent } from '../products-listing/products-listing.c
   ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    ProductsListingComponent
   ]
 })
 export class UtilsModule { }
