@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from 'src/app/interfaces/products.interface';
 
 @Component({
@@ -10,5 +10,11 @@ export class ProductsListingComponent {
 
   @Input() products: Product[] = [];
   @Input() color: string = "blue";
+
+  @Output() onSelect : EventEmitter<Product> = new EventEmitter();
+
+  addToCart(product: Product){
+    this.onSelect.emit(product);
+  }
 
 }

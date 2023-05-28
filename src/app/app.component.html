@@ -3,8 +3,16 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-12">
-      <app-products-listing [products]="latestProducts" [color]="'black'"></app-products-listing>
+    <div class="col-9">
+      <app-products-listing (onSelect)="onProductSelect($event)" [products]="latestProducts" [color]="'black'">
+      </app-products-listing>
+    </div>
+    <div class="col-3">
+      <ul>
+        <li *ngFor="let product of productsAddedToCart">
+          {{product.name}}
+        </li>
+      </ul>
     </div>
   </div>
 </div>

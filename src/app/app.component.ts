@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './interfaces/products.interface';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  productsAddedToCart: Product[] = [];
 
   latestProducts = [{
     "id": 1,
@@ -119,6 +122,12 @@ export class AppComponent {
     "name": "Water Chestnut - Canned",
     "price": 93,
     "description": "lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit"
-  }]
+  }];
+
+
+  onProductSelect(product: Product){
+    console.log(product);
+    this.productsAddedToCart.push(product);
+  }
 
 }
