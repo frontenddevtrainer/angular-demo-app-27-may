@@ -5,7 +5,7 @@
 
   <div class="row">
     <div class="col-12">
-      <app-shopping-list [items]="itemsInCart"></app-shopping-list>
+      <app-shopping-list (onDelete)="onCartDeleteItem($event)" [items]="itemsInCart"></app-shopping-list>
     </div>
   </div>
 

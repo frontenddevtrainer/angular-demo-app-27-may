@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from 'src/app/interfaces/products.interface';
 
 @Component({
@@ -9,6 +9,13 @@ import { Product } from 'src/app/interfaces/products.interface';
 export class ShoppingListComponent {
 
 
-  @Input() items: Product[] = [];
+  @Input("items") itemsInCart: Product[] = [];
+  
+
+  @Output() onDelete: EventEmitter<Product> = new EventEmitter();
+
+  deleteProduct(product: Product){
+    this.onDelete.emit(product)
+  }
 
 }

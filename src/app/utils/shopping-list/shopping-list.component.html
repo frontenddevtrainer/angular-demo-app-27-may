@@ -1,5 +1,6 @@
 <ul>
-    <li *ngFor="let product of items">
+    <li *ngFor="let product of itemsInCart">
         {{ product.name }}
+        <button (click)="deleteProduct(product)">Delete</button>
     </li>
 </ul>
