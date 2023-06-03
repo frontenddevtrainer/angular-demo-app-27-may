@@ -4,7 +4,8 @@ import { ProductsListingComponent } from './products-listing/products-listing.co
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './login-form/login-form.component';
-import { FormsModule } from "@angular/forms"
+import { FormsModule } from "@angular/forms";
+import { ShoppingListComponent } from './shopping-list/shopping-list.component'
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { FormsModule } from "@angular/forms"
     ProductsListingComponent,
     HeaderComponent,
     FooterComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ShoppingListComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { FormsModule } from "@angular/forms"
     ProductsListingComponent,
     HeaderComponent,
     FooterComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ShoppingListComponent
   ]
 })
 export class UtilsModule { }

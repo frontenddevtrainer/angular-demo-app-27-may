@@ -12,13 +12,15 @@ export class AppComponent {
 
   latestProducts: Product[] = [];
 
-  constructor(private products: ProductsService, private user: UserService){
-      this.latestProducts = this.products.latestProducts
+  itemsInCart: Product[] = [{ id: 1, description: "Hello World!!!", name: "New Product 1", price: 10.00, thumbnail: "" }, { id: 1, description: "Hello World!!!", name: "New Product 2", price: 10.00, thumbnail: "" }];
+
+  constructor(private products: ProductsService, private user: UserService) {
+    this.latestProducts = this.products.latestProducts
   }
 
   productsAddedToCart: Product[] = [];
 
-  onProductSelect(product: Product){
+  onProductSelect(product: Product) {
     console.log(product);
     this.productsAddedToCart.push(product);
   }
