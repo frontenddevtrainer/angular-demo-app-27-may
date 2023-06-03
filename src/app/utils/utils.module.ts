@@ -6,7 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule } from "@angular/forms";
 import { ShoppingListComponent } from './shopping-list/shopping-list.component'
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component'
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   exports : [
     ProductsListingComponent,

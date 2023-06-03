@@ -1,4 +1,5 @@
-<ul>
+Fontsize: <button (click)="changeCurrentFontSize('small')">small</button><button (click)="changeCurrentFontSize('medium')">medium</button><button (click)="changeCurrentFontSize('large')">large</button>
+<ul [@fontSizeAnimation]="currentFontAnimationState">
     <li *ngFor="let product of itemsInCart">
         {{ product.name }}
         <button (click)="deleteProduct(product)">Delete</button>
