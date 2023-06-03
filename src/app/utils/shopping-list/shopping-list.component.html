@@ -1,7 +1,11 @@
-Fontsize: <button (click)="changeCurrentFontSize('small')">small</button><button (click)="changeCurrentFontSize('medium')">medium</button><button (click)="changeCurrentFontSize('large')">large</button>
-<ul [@fontSizeAnimation]="currentFontAnimationState">
+Fontsize: <button (click)="changeCurrentFontSize('small')">small</button
+><button (click)="changeCurrentFontSize('medium')">medium</button
+><button (click)="changeCurrentFontSize('large')">large</button>
+<div [@fontSizeAnimation]="currentFontAnimationState">
+  <ul [@listItems]="itemsInCart.length">
     <li *ngFor="let product of itemsInCart">
-        {{ product.name }}
-        <button (click)="deleteProduct(product)">Delete</button>
+      {{ product.name }}
+      <button (click)="deleteProduct(product)">Delete</button>
     </li>
-</ul>
+  </ul>
+</div>

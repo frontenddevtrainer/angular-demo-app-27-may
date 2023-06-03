@@ -26,6 +26,25 @@ export class AppComponent {
       price: 10.0,
       thumbnail: '',
     },
+    {
+      id: 3,
+      description: 'Hello World!!!',
+      name: 'New Product 2',
+      price: 10.0,
+      thumbnail: '',
+    },{
+      id: 4,
+      description: 'Hello World!!!',
+      name: 'New Product 2',
+      price: 10.0,
+      thumbnail: '',
+    },{
+      id: 5,
+      description: 'Hello World!!!',
+      name: 'New Product 2',
+      price: 10.0,
+      thumbnail: '',
+    },
   ];
 
   constructor(private products: ProductsService, private user: UserService) {
