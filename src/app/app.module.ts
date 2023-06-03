@@ -12,7 +12,7 @@ import { UtilsModule } from './utils/utils.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UtilsModule
+    UtilsModule,
   ],
   providers: [
     {
