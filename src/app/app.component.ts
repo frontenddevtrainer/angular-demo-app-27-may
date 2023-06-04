@@ -16,6 +16,8 @@ export class AppComponent {
 
   latestProducts: Product[] = [];
 
+  randomNumber: string = "";
+
   productCategories = 'car'; // car, phone, television, laptop
 
   fontSize = 10;
@@ -106,4 +108,13 @@ export class AppComponent {
     this.isBold = false;
     this.isItalic = false;
   }
+
+  changeProductName(index: number){
+      this.itemsInCart[index].name = Math.random().toString();
+  }
+
+  showRandomNumber(){
+    this.randomNumber = Math.random().toString();
+  }
+    
 }

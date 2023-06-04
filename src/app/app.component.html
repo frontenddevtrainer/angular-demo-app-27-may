@@ -42,11 +42,16 @@
     <input [(ngModel)]="searchText" />
     <div class="col-9">
       <ul>
-        <li *ngFor="let product of latestProducts | productfilter : searchText">
+        <li *ngFor="let product of itemsInCart | productfilter : searchText">
           {{product.name}}
         </li>
       </ul>
     </div>
+
+    {{randomNumber}}
+
+    <button (click)="showRandomNumber()">Update</button>
+    <button (click)="changeProductName(0)">Change product 1 name</button>
 
 
   </div>
