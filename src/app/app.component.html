@@ -1,8 +1,6 @@
 <app-header></app-header>
 
-
 <div class="container">
-
   <!-- <div class="row">
     <div class="col-12">
       <app-shopping-list (onDelete)="onCartDeleteItem($event)" [items]="itemsInCart"></app-shopping-list>
@@ -13,7 +11,15 @@
     <div class="col-3"><app-login-form></app-login-form></div>
   </div> -->
 
-  <div class="row">
+  <div [ngSwitch]="productCategories">
+    <div *ngSwitchCase="'car'">This is the car catergory</div>
+    <div *ngSwitchCase="'phone'">This is the phone catergory</div>
+    <div *ngSwitchCase="'television'">This is the television catergory</div>
+    <div *ngSwitchCase="'laptop'">This is the laptop catergory</div>
+    <div *ngSwitchDefault>This is the default catergory</div>
+  </div>
+
+  <!-- <div class="row">
     <div class="col-9">
       <app-products-listing (onSelect)="onProductSelect($event)" [products]="latestProducts" [color]="'black'">
       </app-products-listing>
@@ -27,11 +33,8 @@
     </div>
 
 
-  </div>
-
+  </div> -->
 </div>
-
-
 
 <!-- ---------- Top Products
 <app-products-listing [products]="topProducts"></app-products-listing> -->

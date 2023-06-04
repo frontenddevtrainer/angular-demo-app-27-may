@@ -11,6 +11,8 @@ import { UserService } from '../app/services/user.service';
 export class AppComponent {
   latestProducts: Product[] = [];
 
+  productCategories = "car"; // car, phone, television, laptop
+
   itemsInCart: Product[] = [
     {
       id: 1,
