@@ -23,11 +23,16 @@
     {{ dummyContent | uppercase | lowercase}}
     {{currentTime | date : "yyyy YY"}}
   </div>
+ 
   <button (click)="increaseFontSize()">+1</button>
   <button (click)="decreaseFontSize()">-1</button>
   <button (click)="makeRegular()">R</button>
   <button (click)="makeBold()"><strong>B</strong></button>
   <button (click)="makeItalic()"><em>I</em></button>
+
+  <div>
+    {{dummyContent | reverse}}
+  </div>
 
   <!-- <div class="row">
     <div class="col-9">

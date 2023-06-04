@@ -8,6 +8,7 @@ import { FormsModule } from "@angular/forms";
 import { ShoppingListComponent } from './shopping-list/shopping-list.component'
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HighlightDirective } from './highlight.directive';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightDirective } from './highlight.directive';
     FooterComponent,
     LoginFormComponent,
     ShoppingListComponent,
-    HighlightDirective
+    HighlightDirective,
+    ReversePipe
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { HighlightDirective } from './highlight.directive';
     FooterComponent,
     LoginFormComponent,
     ShoppingListComponent,
-    HighlightDirective
+    HighlightDirective,
+    ReversePipe
   ]
 })
 export class UtilsModule { }
