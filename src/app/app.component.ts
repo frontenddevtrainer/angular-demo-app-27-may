@@ -12,6 +12,8 @@ export class AppComponent {
   isBold = false;
   isItalic = false;
 
+  searchText: string = "";
+
   latestProducts: Product[] = [];
 
   productCategories = 'car'; // car, phone, television, laptop

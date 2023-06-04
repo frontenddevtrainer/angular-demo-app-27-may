@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UtilsModule } from './utils/utils.module';
 
+import { FormsModule } from "@angular/forms"
+
 @NgModule({
   declarations: [
     AppComponent
@@ -13,6 +15,7 @@ import { UtilsModule } from './utils/utils.module';
     BrowserModule,
     AppRoutingModule,
     UtilsModule,
+    FormsModule
   ],
   providers: [
     {

@@ -9,6 +9,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component'
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HighlightDirective } from './highlight.directive';
 import { ReversePipe } from './reverse.pipe';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReversePipe } from './reverse.pipe';
     LoginFormComponent,
     ShoppingListComponent,
     HighlightDirective,
-    ReversePipe
+    ReversePipe,
+    FilterPipe
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { ReversePipe } from './reverse.pipe';
     LoginFormComponent,
     ShoppingListComponent,
     HighlightDirective,
-    ReversePipe
+    ReversePipe,
+    FilterPipe
   ]
 })
 export class UtilsModule { }

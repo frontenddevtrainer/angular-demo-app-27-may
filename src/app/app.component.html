@@ -11,7 +11,7 @@
     <div class="col-3"><app-login-form></app-login-form></div>
   </div> -->
 
-  <div [ngSwitch]="productCategories">
+  <!-- <div [ngSwitch]="productCategories">
     <div *ngSwitchCase="'car'">This is the car catergory</div>
     <div *ngSwitchCase="'phone'">This is the phone catergory</div>
     <div *ngSwitchCase="'television'">This is the television catergory</div>
@@ -32,23 +32,24 @@
 
   <div>
     {{dummyContent | reverse}}
-  </div>
+  </div> -->
 
-  <!-- <div class="row">
-    <div class="col-9">
+  <div class="row">
+    <!-- <div class="col-9">
       <app-products-listing (onSelect)="onProductSelect($event)" [products]="latestProducts" [color]="'black'">
       </app-products-listing>
-    </div>
-    <div class="col-3">
+    </div> -->
+    <input [(ngModel)]="searchText" />
+    <div class="col-9">
       <ul>
-        <li *ngFor="let product of productsAddedToCart">
+        <li *ngFor="let product of latestProducts | productfilter : searchText">
           {{product.name}}
         </li>
       </ul>
     </div>
 
 
-  </div> -->
+  </div>
 </div>
 
 <!-- ---------- Top Products
