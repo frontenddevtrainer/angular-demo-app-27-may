@@ -7,6 +7,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule } from "@angular/forms";
 import { ShoppingListComponent } from './shopping-list/shopping-list.component'
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     HeaderComponent,
     FooterComponent,
     LoginFormComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    HighlightDirective
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     HeaderComponent,
     FooterComponent,
     LoginFormComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    HighlightDirective
   ]
 })
 export class UtilsModule { }
