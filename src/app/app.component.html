@@ -19,6 +19,18 @@
     <div *ngSwitchDefault>This is the default catergory</div>
   </div>
 
+  <div
+    [ngStyle]="textStyle"
+    [ngClass]="textClass"
+  >
+    This is demo content
+  </div>
+  <button (click)="increaseFontSize()">+1</button>
+  <button (click)="decreaseFontSize()">-1</button>
+  <button (click)="makeRegular()">R</button>
+  <button (click)="makeBold()"><strong>B</strong></button>
+  <button (click)="makeItalic()"><em>I</em></button>
+
   <!-- <div class="row">
     <div class="col-9">
       <app-products-listing (onSelect)="onProductSelect($event)" [products]="latestProducts" [color]="'black'">
