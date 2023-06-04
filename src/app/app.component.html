@@ -19,12 +19,9 @@
     <div *ngSwitchDefault>This is the default catergory</div>
   </div>
 
-  <div
-    [ngStyle]="textStyle"
-    [ngClass]="textClass"
-    [highlight]="'blue'"
-  >
-    This is demo content
+  <div [ngStyle]="textStyle" [ngClass]="textClass">
+    {{ dummyContent | uppercase | lowercase}}
+    {{currentTime | date : "yyyy YY"}}
   </div>
   <button (click)="increaseFontSize()">+1</button>
   <button (click)="decreaseFontSize()">-1</button>

@@ -21,6 +21,10 @@ export class AppComponent {
   textStyle = { 'fontSize.px': this.fontSize };
   textClass = { 'bold-text': this.isBold, 'italic-text': this.isItalic };
 
+  dummyContent = "This is demo content";
+
+  currentTime = new Date();
+
   itemsInCart: Product[] = [
     {
       id: 1,
