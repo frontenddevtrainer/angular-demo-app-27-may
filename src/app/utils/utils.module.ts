@@ -11,6 +11,7 @@ import { HighlightDirective } from './highlight.directive';
 import { ReversePipe } from './reverse.pipe';
 import { FilterPipe } from './filter.pipe';
 import { EmployeesearchDirective } from './employeesearch.directive';
+import { UsersListingComponent } from './users-listing/users-listing.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { EmployeesearchDirective } from './employeesearch.directive';
     ReversePipe,
     FilterPipe,
     EmployeesearchDirective,
+    UsersListingComponent,
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { EmployeesearchDirective } from './employeesearch.directive';
     ShoppingListComponent,
     HighlightDirective,
     ReversePipe,
-    FilterPipe
+    FilterPipe,
+    UsersListingComponent
   ]
 })
 export class UtilsModule { }

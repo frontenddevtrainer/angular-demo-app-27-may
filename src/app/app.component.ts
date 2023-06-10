@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from './interfaces/products.interface';
 import { ProductsService } from '../app/services/products.service';
 import { UserService } from '../app/services/user.service';
@@ -8,7 +8,7 @@ import { UserService } from '../app/services/user.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   isBold = false;
   isItalic = false;
 
@@ -31,6 +31,10 @@ export class AppComponent {
 
   constructor(private products: ProductsService, private user: UserService) {
     this.latestProducts = this.products.latestProducts;
+  }
+
+  ngOnInit(): void {
+    // this.user.getUsers();
   }
 
   productsAddedToCart: Product[] = [];

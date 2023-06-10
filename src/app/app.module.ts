@@ -9,6 +9,8 @@ import { FormsModule } from "@angular/forms";
 import { FilterDirective } from './filter.directive';
 import { ColorDirective } from './directives/color.directive';
 
+import { HttpClientModule } from "@angular/common/http"
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { ColorDirective } from './directives/color.directive';
     BrowserModule,
     AppRoutingModule,
     UtilsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     {
