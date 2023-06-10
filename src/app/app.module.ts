@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UtilsModule } from './utils/utils.module';
 
-import { FormsModule } from "@angular/forms"
+import { FormsModule } from "@angular/forms";
+import { FilterDirective } from './filter.directive';
+import { ColorDirective } from './directives/color.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilterDirective,
+    ColorDirective,
   ],
   imports: [
     BrowserModule,

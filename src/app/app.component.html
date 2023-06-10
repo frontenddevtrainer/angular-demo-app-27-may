@@ -1,11 +1,11 @@
 <app-header></app-header>
 
 <div class="container">
-  <!-- <div class="row">
+  <div class="row">
     <div class="col-12">
-      <app-shopping-list (onDelete)="onCartDeleteItem($event)" [items]="itemsInCart"></app-shopping-list>
+      <app-shopping-list (onDelete)="onCartDeleteItem($event)"></app-shopping-list>
     </div>
-  </div> -->
+  </div>
 
   <!-- <div class="row">
     <div class="col-3"><app-login-form></app-login-form></div>
@@ -39,19 +39,19 @@
       <app-products-listing (onSelect)="onProductSelect($event)" [products]="latestProducts" [color]="'black'">
       </app-products-listing>
     </div> -->
-    <input [(ngModel)]="searchText" />
+    <!-- <input [(ngModel)]="searchText" />
     <div class="col-9">
       <ul>
         <li *ngFor="let product of itemsInCart | productfilter : searchText">
           {{product.name}}
         </li>
       </ul>
-    </div>
+    </div> -->
 
-    {{randomNumber}}
+    <!-- {{randomNumber}} -->
 
-    <button (click)="showRandomNumber()">Update</button>
-    <button (click)="changeProductName(0)">Change product 1 name</button>
+    <!-- <button (click)="showRandomNumber()">Update</button>
+    <button (click)="changeProductName(0)">Change product 1 name</button> -->
 
 
   </div>

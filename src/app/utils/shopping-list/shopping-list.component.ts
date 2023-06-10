@@ -18,6 +18,8 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { Product } from 'src/app/interfaces/products.interface';
+import { CartService } from 'src/app/services/cart.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-shopping-list',
@@ -53,9 +55,18 @@ import { Product } from 'src/app/interfaces/products.interface';
   ],
 })
 export class ShoppingListComponent implements OnInit, OnChanges, OnDestroy {
+
+  // user!: UserService;
+
+  itemsInCart: Product[] = [];
+
+  constructor(private user: UserService, private cart: CartService){
+    this.itemsInCart = cart.items;
+  }
+
   currentFontAnimationState = 'medium';
 
-  @Input('items') itemsInCart: Product[] = [];
+  // @Input('items') itemsInCart: Product[] = [];
 
   @Output() onDelete: EventEmitter<Product> = new EventEmitter();
 

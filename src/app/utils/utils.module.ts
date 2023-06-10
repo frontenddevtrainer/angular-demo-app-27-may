@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HighlightDirective } from './highlight.directive';
 import { ReversePipe } from './reverse.pipe';
 import { FilterPipe } from './filter.pipe';
+import { EmployeesearchDirective } from './employeesearch.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FilterPipe } from './filter.pipe';
     ShoppingListComponent,
     HighlightDirective,
     ReversePipe,
-    FilterPipe
+    FilterPipe,
+    EmployeesearchDirective,
   ],
   imports: [
     CommonModule,
