@@ -11,7 +11,9 @@ export class HeaderComponent {
 
     itemsInCart : Product[] = [];
     constructor(private cart: CartService){
-        this.itemsInCart = cart.items;
+        cart.items.subscribe((items)=>{
+          this.itemsInCart = items;
+        })
     }
 
 }

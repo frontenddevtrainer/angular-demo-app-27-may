@@ -61,7 +61,9 @@ export class ShoppingListComponent implements OnInit, OnChanges, OnDestroy {
   itemsInCart: Product[] = [];
 
   constructor(private user: UserService, private cart: CartService){
-    this.itemsInCart = cart.items;
+    cart.items.subscribe((products)=>{
+        this.itemsInCart = products;
+    })
   }
 
   currentFontAnimationState = 'medium';
@@ -71,7 +73,8 @@ export class ShoppingListComponent implements OnInit, OnChanges, OnDestroy {
   @Output() onDelete: EventEmitter<Product> = new EventEmitter();
 
   deleteProduct(product: Product) {
-    this.onDelete.emit(product);
+    // this.onDelete.emit(product);
+    this.cart.deleteProduct(product);
   }
 
   changeCurrentFontSize(size: string) {
