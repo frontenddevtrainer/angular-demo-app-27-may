@@ -3,3 +3,7 @@
         {{user.name}}
     </li>
 </ul>
+
+<p *ngIf="isLoading">Loading...</p>
+<input [(ngModel)]="username" />
+<button (click)="saveUser()">Add new user</button>

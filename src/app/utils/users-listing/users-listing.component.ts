@@ -9,6 +9,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UsersListingComponent implements OnInit {
   users!: User[];
+  username: string = "";
+  isLoading = false;
 
   constructor(private userService: UserService) {
     this.userService.users.subscribe((users) => {
@@ -20,5 +22,16 @@ export class UsersListingComponent implements OnInit {
     this.userService.getUsers();
   }
 
+  saveUser(){
+    this.isLoading = true;
+    this.userService.addNewUser(this.username).subscribe(()=>{
+      console.log("Added user.");
+      this.isLoading = false;
+      this.userService.getUsers();
+    }, (error)=>{
+      this.isLoading = false;
+      console.log(error);
+    });
+  }
 
 }

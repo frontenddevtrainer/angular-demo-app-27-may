@@ -19,6 +19,18 @@ export class UserService {
       })
   }
 
+  // GET /users read > [ {}, {} ]
+  // GET /users/:params ex: /users/1 > {}
+  // POST /users create > { id: 1 }
+  // PUT or PATCH /users/:params update ex: /users/1
+  // DELETE /user/:params, ex: /users/1
+
+  // CRUD > POST GET PUT OR PATCH DELETE
+
+  addNewUser(username: string){
+    return this.http.post(this.config.URLS.users, { username: username })
+  }
+
   getUserListing(){
     return this.http.get<User[]>(this.config.URLS.users);
   }
